@@ -328,7 +328,7 @@ class LinuxBridgeManager(amb.CommonAgentManagerBase):
                       "VNI %(segmentation_id)s",
                       {'interface': interface,
                        'segmentation_id': segmentation_id})
-            args = {'dev': self.local_int,
+            args = {'local': self.local_ip,
                     'srcport': (cfg.CONF.VXLAN.udp_srcport_min,
                                 cfg.CONF.VXLAN.udp_srcport_max),
                     'dstport': cfg.CONF.VXLAN.udp_dstport,
